@@ -2,30 +2,30 @@ package MidtermSample3;
 
 public class Employee {
 
-    // Private fields
+    
     private int id;
     private String name;
     private double salary;
     private String department;
 
-    // Constructor 1
+    
     public Employee(int id, String name) {
         this(id, name, 1000.0, "General"); // constructor chaining
     }
 
-    // Constructor 2
+    
     public Employee(int id, String name, double salary, String department) {
         this.id = id;
         this.name = name;
 
-        // Validation for salary
+        
         if (salary > 0) {
             this.salary = salary;
         } else {
             this.salary = 1000.0;
         }
 
-        // Validation for department
+        
         if (department != null && !department.isEmpty()) {
             this.department = department;
         } else {
@@ -33,12 +33,12 @@ public class Employee {
         }
     }
 
-    // Calculate yearly salary
+    
     public double calculateYearlySalary() {
         return salary * 12;
     }
 
-    // Increase salary by percent
+    
     public void increaseSalary(double percent) {
         if (percent > 0) {
             salary = salary + (salary * percent / 100);
